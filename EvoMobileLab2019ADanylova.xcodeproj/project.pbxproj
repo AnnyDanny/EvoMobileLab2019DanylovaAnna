@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C04FADB22859564001BB585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04FADA22859564001BB585 /* AppDelegate.swift */; };
+		5C04FADD22859564001BB585 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04FADC22859564001BB585 /* ViewController.swift */; };
+		5C04FAE022859564001BB585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C04FADE22859564001BB585 /* Main.storyboard */; };
+		5C04FAE322859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C04FAE122859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodeld */; };
+		5C04FAE522859564001BB585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C04FAE422859564001BB585 /* Assets.xcassets */; };
+		5C04FAE822859564001BB585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C04FAE622859564001BB585 /* LaunchScreen.storyboard */; };
+		5C04FAF322859564001BB585 /* EvoMobileLab2019ADanylovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04FAF222859564001BB585 /* EvoMobileLab2019ADanylovaTests.swift */; };
+		5C04FAFE22859564001BB585 /* EvoMobileLab2019ADanylovaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04FAFD22859564001BB585 /* EvoMobileLab2019ADanylovaUITests.swift */; };
+		5C04FB102285A652001BB585 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04FB0F2285A652001BB585 /* NotesTableViewCell.swift */; };
+		5C55372E228AF3ED006ED018 /* StructNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C55372D228AF3ED006ED018 /* StructNotes.swift */; };
+		5C667A0E228B00190028E832 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667A0D228B00190028E832 /* CreateNoteViewController.swift */; };
+		5C667A11228B102B0028E832 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667A0F228B102B0028E832 /* Notes+CoreDataClass.swift */; };
+		5C667A12228B102B0028E832 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667A10228B102B0028E832 /* Notes+CoreDataProperties.swift */; };
+		5C667A14228B1CDD0028E832 /* ShowNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667A13228B1CDD0028E832 /* ShowNoteViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C04FAEF22859564001BB585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C04FACF22859563001BB585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C04FAD622859564001BB585;
+			remoteInfo = EvoMobileLab2019ADanylova;
+		};
+		5C04FAFA22859564001BB585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C04FACF22859563001BB585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C04FAD622859564001BB585;
+			remoteInfo = EvoMobileLab2019ADanylova;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C04FAD722859564001BB585 /* EvoMobileLab2019ADanylova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvoMobileLab2019ADanylova.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C04FADA22859564001BB585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C04FADC22859564001BB585 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C04FADF22859564001BB585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C04FAE222859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EvoMobileLab2019ADanylova.xcdatamodel; sourceTree = "<group>"; };
+		5C04FAE422859564001BB585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C04FAE722859564001BB585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C04FAE922859564001BB585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C04FAEE22859564001BB585 /* EvoMobileLab2019ADanylovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvoMobileLab2019ADanylovaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C04FAF222859564001BB585 /* EvoMobileLab2019ADanylovaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvoMobileLab2019ADanylovaTests.swift; sourceTree = "<group>"; };
+		5C04FAF422859564001BB585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C04FAF922859564001BB585 /* EvoMobileLab2019ADanylovaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvoMobileLab2019ADanylovaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C04FAFD22859564001BB585 /* EvoMobileLab2019ADanylovaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvoMobileLab2019ADanylovaUITests.swift; sourceTree = "<group>"; };
+		5C04FAFF22859564001BB585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C04FB0F2285A652001BB585 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		5C55372D228AF3ED006ED018 /* StructNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructNotes.swift; sourceTree = "<group>"; };
+		5C667A0D228B00190028E832 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		5C667A0F228B102B0028E832 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5C667A10228B102B0028E832 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5C667A13228B1CDD0028E832 /* ShowNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoteViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C04FAD422859564001BB585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C04FAEB22859564001BB585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C04FAF622859564001BB585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C04FACE22859563001BB585 = {
+			isa = PBXGroup;
+			children = (
+				5C667A0F228B102B0028E832 /* Notes+CoreDataClass.swift */,
+				5C667A10228B102B0028E832 /* Notes+CoreDataProperties.swift */,
+				5C04FB0F2285A652001BB585 /* NotesTableViewCell.swift */,
+				5C04FAD922859564001BB585 /* EvoMobileLab2019ADanylova */,
+				5C04FAF122859564001BB585 /* EvoMobileLab2019ADanylovaTests */,
+				5C04FAFC22859564001BB585 /* EvoMobileLab2019ADanylovaUITests */,
+				5C04FAD822859564001BB585 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C04FAD822859564001BB585 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C04FAD722859564001BB585 /* EvoMobileLab2019ADanylova.app */,
+				5C04FAEE22859564001BB585 /* EvoMobileLab2019ADanylovaTests.xctest */,
+				5C04FAF922859564001BB585 /* EvoMobileLab2019ADanylovaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C04FAD922859564001BB585 /* EvoMobileLab2019ADanylova */ = {
+			isa = PBXGroup;
+			children = (
+				5C04FADA22859564001BB585 /* AppDelegate.swift */,
+				5C04FADC22859564001BB585 /* ViewController.swift */,
+				5C04FADE22859564001BB585 /* Main.storyboard */,
+				5C04FAE422859564001BB585 /* Assets.xcassets */,
+				5C04FAE622859564001BB585 /* LaunchScreen.storyboard */,
+				5C04FAE922859564001BB585 /* Info.plist */,
+				5C04FAE122859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodeld */,
+				5C55372D228AF3ED006ED018 /* StructNotes.swift */,
+				5C667A0D228B00190028E832 /* CreateNoteViewController.swift */,
+				5C667A13228B1CDD0028E832 /* ShowNoteViewController.swift */,
+			);
+			path = EvoMobileLab2019ADanylova;
+			sourceTree = "<group>";
+		};
+		5C04FAF122859564001BB585 /* EvoMobileLab2019ADanylovaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C04FAF222859564001BB585 /* EvoMobileLab2019ADanylovaTests.swift */,
+				5C04FAF422859564001BB585 /* Info.plist */,
+			);
+			path = EvoMobileLab2019ADanylovaTests;
+			sourceTree = "<group>";
+		};
+		5C04FAFC22859564001BB585 /* EvoMobileLab2019ADanylovaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C04FAFD22859564001BB585 /* EvoMobileLab2019ADanylovaUITests.swift */,
+				5C04FAFF22859564001BB585 /* Info.plist */,
+			);
+			path = EvoMobileLab2019ADanylovaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C04FAD622859564001BB585 /* EvoMobileLab2019ADanylova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C04FB0222859564001BB585 /* Build configuration list for PBXNativeTarget "EvoMobileLab2019ADanylova" */;
+			buildPhases = (
+				5C04FAD322859564001BB585 /* Sources */,
+				5C04FAD422859564001BB585 /* Frameworks */,
+				5C04FAD522859564001BB585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EvoMobileLab2019ADanylova;
+			productName = EvoMobileLab2019ADanylova;
+			productReference = 5C04FAD722859564001BB585 /* EvoMobileLab2019ADanylova.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C04FAED22859564001BB585 /* EvoMobileLab2019ADanylovaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C04FB0522859564001BB585 /* Build configuration list for PBXNativeTarget "EvoMobileLab2019ADanylovaTests" */;
+			buildPhases = (
+				5C04FAEA22859564001BB585 /* Sources */,
+				5C04FAEB22859564001BB585 /* Frameworks */,
+				5C04FAEC22859564001BB585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C04FAF022859564001BB585 /* PBXTargetDependency */,
+			);
+			name = EvoMobileLab2019ADanylovaTests;
+			productName = EvoMobileLab2019ADanylovaTests;
+			productReference = 5C04FAEE22859564001BB585 /* EvoMobileLab2019ADanylovaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C04FAF822859564001BB585 /* EvoMobileLab2019ADanylovaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C04FB0822859564001BB585 /* Build configuration list for PBXNativeTarget "EvoMobileLab2019ADanylovaUITests" */;
+			buildPhases = (
+				5C04FAF522859564001BB585 /* Sources */,
+				5C04FAF622859564001BB585 /* Frameworks */,
+				5C04FAF722859564001BB585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C04FAFB22859564001BB585 /* PBXTargetDependency */,
+			);
+			name = EvoMobileLab2019ADanylovaUITests;
+			productName = EvoMobileLab2019ADanylovaUITests;
+			productReference = 5C04FAF922859564001BB585 /* EvoMobileLab2019ADanylovaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C04FACF22859563001BB585 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ganna DANYLOVA";
+				TargetAttributes = {
+					5C04FAD622859564001BB585 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					5C04FAED22859564001BB585 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5C04FAD622859564001BB585;
+					};
+					5C04FAF822859564001BB585 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5C04FAD622859564001BB585;
+					};
+				};
+			};
+			buildConfigurationList = 5C04FAD222859563001BB585 /* Build configuration list for PBXProject "EvoMobileLab2019ADanylova" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C04FACE22859563001BB585;
+			productRefGroup = 5C04FAD822859564001BB585 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C04FAD622859564001BB585 /* EvoMobileLab2019ADanylova */,
+				5C04FAED22859564001BB585 /* EvoMobileLab2019ADanylovaTests */,
+				5C04FAF822859564001BB585 /* EvoMobileLab2019ADanylovaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C04FAD522859564001BB585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C04FAE822859564001BB585 /* LaunchScreen.storyboard in Resources */,
+				5C04FAE522859564001BB585 /* Assets.xcassets in Resources */,
+				5C04FAE022859564001BB585 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C04FAEC22859564001BB585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C04FAF722859564001BB585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C04FAD322859564001BB585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C04FADD22859564001BB585 /* ViewController.swift in Sources */,
+				5C04FAE322859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodeld in Sources */,
+				5C667A11228B102B0028E832 /* Notes+CoreDataClass.swift in Sources */,
+				5C667A0E228B00190028E832 /* CreateNoteViewController.swift in Sources */,
+				5C04FADB22859564001BB585 /* AppDelegate.swift in Sources */,
+				5C667A14228B1CDD0028E832 /* ShowNoteViewController.swift in Sources */,
+				5C667A12228B102B0028E832 /* Notes+CoreDataProperties.swift in Sources */,
+				5C55372E228AF3ED006ED018 /* StructNotes.swift in Sources */,
+				5C04FB102285A652001BB585 /* NotesTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C04FAEA22859564001BB585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C04FAF322859564001BB585 /* EvoMobileLab2019ADanylovaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C04FAF522859564001BB585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C04FAFE22859564001BB585 /* EvoMobileLab2019ADanylovaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C04FAF022859564001BB585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C04FAD622859564001BB585 /* EvoMobileLab2019ADanylova */;
+			targetProxy = 5C04FAEF22859564001BB585 /* PBXContainerItemProxy */;
+		};
+		5C04FAFB22859564001BB585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C04FAD622859564001BB585 /* EvoMobileLab2019ADanylova */;
+			targetProxy = 5C04FAFA22859564001BB585 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C04FADE22859564001BB585 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C04FADF22859564001BB585 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C04FAE622859564001BB585 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C04FAE722859564001BB585 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C04FB0022859564001BB585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C04FB0122859564001BB585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C04FB0322859564001BB585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EvoMobileLab2019ADanylova/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DanylovaAnna.EvoMobileLab2019ADanylova;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C04FB0422859564001BB585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EvoMobileLab2019ADanylova/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DanylovaAnna.EvoMobileLab2019ADanylova;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C04FB0622859564001BB585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EvoMobileLab2019ADanylovaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DanylovaAnna.EvoMobileLab2019ADanylovaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EvoMobileLab2019ADanylova.app/EvoMobileLab2019ADanylova";
+			};
+			name = Debug;
+		};
+		5C04FB0722859564001BB585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EvoMobileLab2019ADanylovaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DanylovaAnna.EvoMobileLab2019ADanylovaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EvoMobileLab2019ADanylova.app/EvoMobileLab2019ADanylova";
+			};
+			name = Release;
+		};
+		5C04FB0922859564001BB585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EvoMobileLab2019ADanylovaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DanylovaAnna.EvoMobileLab2019ADanylovaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EvoMobileLab2019ADanylova;
+			};
+			name = Debug;
+		};
+		5C04FB0A22859564001BB585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EvoMobileLab2019ADanylovaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DanylovaAnna.EvoMobileLab2019ADanylovaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EvoMobileLab2019ADanylova;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C04FAD222859563001BB585 /* Build configuration list for PBXProject "EvoMobileLab2019ADanylova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C04FB0022859564001BB585 /* Debug */,
+				5C04FB0122859564001BB585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C04FB0222859564001BB585 /* Build configuration list for PBXNativeTarget "EvoMobileLab2019ADanylova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C04FB0322859564001BB585 /* Debug */,
+				5C04FB0422859564001BB585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C04FB0522859564001BB585 /* Build configuration list for PBXNativeTarget "EvoMobileLab2019ADanylovaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C04FB0622859564001BB585 /* Debug */,
+				5C04FB0722859564001BB585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C04FB0822859564001BB585 /* Build configuration list for PBXNativeTarget "EvoMobileLab2019ADanylovaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C04FB0922859564001BB585 /* Debug */,
+				5C04FB0A22859564001BB585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C04FAE122859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C04FAE222859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodel */,
+			);
+			currentVersion = 5C04FAE222859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodel */;
+			path = EvoMobileLab2019ADanylova.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5C04FACF22859563001BB585 /* Project object */;
+}
