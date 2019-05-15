@@ -13,12 +13,12 @@ class ShowNoteViewController: UIViewController {
     
     @IBOutlet weak var showNote: UILabel!
     
-    var note: String = ""
+    var note: Notes?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if note != nil {
-            showNote.text = note
+            showNote.text = note?.descriptionNote
         }
         else {
             print("\nnote == nil\n")
@@ -26,10 +26,6 @@ class ShowNoteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*

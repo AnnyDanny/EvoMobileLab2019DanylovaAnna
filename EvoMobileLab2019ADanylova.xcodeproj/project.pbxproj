@@ -21,6 +21,9 @@
 		5C667A11228B102B0028E832 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667A0F228B102B0028E832 /* Notes+CoreDataClass.swift */; };
 		5C667A12228B102B0028E832 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667A10228B102B0028E832 /* Notes+CoreDataProperties.swift */; };
 		5C667A14228B1CDD0028E832 /* ShowNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C667A13228B1CDD0028E832 /* ShowNoteViewController.swift */; };
+		5CFB51BB228C251900FE2C63 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB51BA228C251900FE2C63 /* NotesManager.swift */; };
+		5CFB51BC228C3DAA00FE2C63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04FADC22859564001BB585 /* ViewController.swift */; };
+		5CFB51C0228C597C00FE2C63 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB51BF228C597C00FE2C63 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,8 @@
 		5C667A0F228B102B0028E832 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5C667A10228B102B0028E832 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5C667A13228B1CDD0028E832 /* ShowNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoteViewController.swift; sourceTree = "<group>"; };
+		5CFB51BA228C251900FE2C63 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		5CFB51BF228C597C00FE2C63 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,8 @@
 				5C55372D228AF3ED006ED018 /* StructNotes.swift */,
 				5C667A0D228B00190028E832 /* CreateNoteViewController.swift */,
 				5C667A13228B1CDD0028E832 /* ShowNoteViewController.swift */,
+				5CFB51BA228C251900FE2C63 /* NotesManager.swift */,
+				5CFB51BF228C597C00FE2C63 /* EditViewController.swift */,
 			);
 			path = EvoMobileLab2019ADanylova;
 			sourceTree = "<group>";
@@ -281,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C04FADD22859564001BB585 /* ViewController.swift in Sources */,
+				5CFB51BB228C251900FE2C63 /* NotesManager.swift in Sources */,
 				5C04FAE322859564001BB585 /* EvoMobileLab2019ADanylova.xcdatamodeld in Sources */,
 				5C667A11228B102B0028E832 /* Notes+CoreDataClass.swift in Sources */,
 				5C667A0E228B00190028E832 /* CreateNoteViewController.swift in Sources */,
@@ -288,6 +296,7 @@
 				5C667A14228B1CDD0028E832 /* ShowNoteViewController.swift in Sources */,
 				5C667A12228B102B0028E832 /* Notes+CoreDataProperties.swift in Sources */,
 				5C55372E228AF3ED006ED018 /* StructNotes.swift in Sources */,
+				5CFB51C0228C597C00FE2C63 /* EditViewController.swift in Sources */,
 				5C04FB102285A652001BB585 /* NotesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFB51BC228C3DAA00FE2C63 /* ViewController.swift in Sources */,
 				5C04FAFE22859564001BB585 /* EvoMobileLab2019ADanylovaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
