@@ -11,9 +11,40 @@ import CoreData
 
 var notesManager = NotesManager()
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var tableViewNotes: UITableView!
+    
+    @IBAction func sortingButton(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "From new to old", style: .default) { (action: UIAlertAction) in
+            print("You've pressed the destructive");
+            self.filtered = self.filtered.sorted(){$0.creationDate! > $1.creationDate!}
+            self.tableViewNotes.reloadData()
+//            convertedArray.sorted(by: {$0.timeIntervalSince1970 < $1.timeIntervalSince1970})
+        }
+        let action2 = UIAlertAction(title: "From old to new", style: .default) { (action: UIAlertAction) in
+            print("You've pressed the destructive");
+            self.filtered = self.filtered.sorted(){$0.creationDate! < $1.creationDate!}
+            self.tableViewNotes.reloadData()
+        }
+        let action3 = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction) in
+            print("You've pressed cancel");
+        }
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        alertController.addAction(action3)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var searchNote: UISearchBar!
+    
+    var searchActive : Bool = false
+    var filtered: [Notes] = []
+//    var filtered: Notes?
+//    var filtered: String?
     
     @IBAction func item(_ sender: UIBarButtonItem) {
         
@@ -25,14 +56,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //    var data: [NSManagedObject] = []
     var note: Notes!
 
+//    func searchBar(_ searchBar: UISearchBar,
+//                            textDidChange searchText: String) {
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewNotes.dataSource = self
         tableViewNotes.delegate = self
+        searchNote.delegate = self
 //        tableViewNotes.estimatedRowHeight = 200
         tableViewNotes.rowHeight = UITableViewAutomaticDimension
         notesManager.managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         data = notesManager.getAllArticles()
+        filtered = data
         print("data1: \(data)\n")
 //        createDefaultNote()
 //        let imageForTitle = "notes"
@@ -45,6 +82,46 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+        searchNote.showsCancelButton = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+        searchNote.endEditing(true)
+        searchNote.showsCancelButton = false
+        filtered = notesManager.getAllArticles()
+        self.tableViewNotes.reloadData()
+    }
+
+    
+
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        print("hello search")
+        filtered = data.filter({ (text) -> Bool in
+
+            let tmp: String? = text.descriptionNote
+            let range = tmp?.range(of: searchText, options: .caseInsensitive)
+            return (range != nil)
+        })
+        if(filtered.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+            if searchText == "" {
+                filtered = notesManager.getAllArticles()
+            }
+        self.tableViewNotes.reloadData()
+    }
+    
+    
 //    func createDefaultNote() {
 //        let note1 = DefaultNotes(date: Date(), description : "Hello where")
 //        let note2 = DefaultNotes(date:  Date(), description: "Hei, whats up?")
@@ -57,6 +134,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         data = notesManager.getAllArticles()
+        filtered = notesManager.getAllArticles()
         tableViewNotes.reloadData()
         print("data2: \(data)\n")
     }
@@ -64,12 +142,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         data = notesManager.getAllArticles()
+        filtered = notesManager.getAllArticles()
         print("data3: \(data)\n")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewNotes.dequeueReusableCell(withIdentifier: "notesCell") as! NotesTableViewCell
-        let notes = data[indexPath.row]
+        let notes = filtered[indexPath.row]
         if indexPath.row % 2 == 0 {
             cell.contentView.backgroundColor = UIColor.purple
         }
@@ -77,12 +156,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.contentView.backgroundColor = UIColor.lightGray
         }
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.dateFormat = "dd.mm.yy"
+        
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:MM"
         
         cell.dateLablel.text = dateFormatter.string(from: notes.creationDate! as Date)
         cell.descLabel.text = notes.descriptionNote
+        cell.timeLabel.text = timeFormatter.string(from: notes.creationDate! as Date)
 //        cell.dateLablel.text = dateFormatter.string(from: data[indexPath.row].creationDate! as Date)
 //        cell.descLabel.text = data[indexPath.row].descriptionNote
         
@@ -103,8 +185,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
             print("Delete tapped")
-            notesManager.managedObjectContext?.delete(self.data[indexPath.row])
-            self.data.remove(at: indexPath.row)
+            notesManager.managedObjectContext?.delete(self.filtered[indexPath.row])
+            self.filtered.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.tableViewNotes.reloadData()
 //            NoteHandler.shared.appDelegate?.saveContext()
@@ -119,7 +201,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "EditViewController") as! EditViewController
 //        self.present(controller, animated: true, completion: nil)
-        controller.editNote = self.data[indexPath.row]
+        controller.editNote = self.filtered[indexPath.row]
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -140,12 +222,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return filtered.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(data[indexPath.row].descriptionNote)
-        self.note = data[indexPath.row]
+        print(filtered[indexPath.row].descriptionNote)
+        self.note = filtered[indexPath.row]
         //
         performSegue(withIdentifier: "goToShowNote", sender: self)
         print("data5: \(data)\n")

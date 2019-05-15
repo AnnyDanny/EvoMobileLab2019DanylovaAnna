@@ -14,4 +14,5 @@ class NotesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descLabel: UILabel!
     
+    @IBOutlet weak var timeLabel: UILabel!
 }

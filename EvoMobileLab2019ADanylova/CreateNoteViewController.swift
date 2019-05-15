@@ -29,7 +29,7 @@ class CreateNoteViewController: UIViewController, UITextFieldDelegate, UITextVie
         createDescNote.delegate = self
         createDescNote.delegate = self
         if notesManager == nil {
-            print("NIIIIIIIIL")
+//            print("NIIIIIIIIL")
         }
         addTextViewHeight(createDescNote : createDescNote)
         // Do any additional setup after loading the view.
@@ -50,7 +50,7 @@ class CreateNoteViewController: UIViewController, UITextFieldDelegate, UITextVie
             let note = Notes(entity: Notes.entity(), insertInto: notesManager.managedObjectContext)
 //            let note = notesManager?.newNote()
             note.descriptionNote = createDescNote.text
-            note.creationDate = Date() as NSDate
+            note.creationDate = Date() as Date
             notesManager.save()
             //try? notesManager.managedObjectContext?.save()
             print("\nnote:\(note.descriptionNote)\n")

@@ -18,6 +18,11 @@ class EditViewController: UIViewController {
     
      var editNote: Notes?
     
+//    @IBAction func save(_ sender: UIBarButtonItem) {
+//        //        navigationController!.popViewController(animated: true)
+//        dismiss(animated: true, completion: nil)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,10 +35,24 @@ class EditViewController: UIViewController {
         else {
             print("\nnote == nil\n")
         }
+        
+        let saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.plain, target: self, action: #selector(save))
+        self.navigationItem.rightBarButtonItem = saveButton
     }
 
-    @objc func back(){
-        print("\n\nclicked back\n\n")
+    @objc func save(){
+        if let edit = editTextView.text, !edit.isEmpty {
+//            let note = Notes(entity: Notes.entity(), insertInto: notesManager.managedObjectContext)
+            //            let note = notesManager?.newNote()
+        editNote?.descriptionNote = editTextView.text
+        editNote?.creationDate = Date()
+            notesManager.save()
+            //try? notesManager.managedObjectContext?.save()
+        print("\nnote:\(editNote?.descriptionNote)\n")
+        }
+//        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: false)
+        print("\n\nclicked save\n\n")
     }
     
     override func didReceiveMemoryWarning() {
