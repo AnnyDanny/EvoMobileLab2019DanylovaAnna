@@ -11,25 +11,20 @@ import CoreData
 
 class NotesManager {
     
+    var index = 0
     var managedObjectContext: NSManagedObjectContext?
+    var limit = 10
     
-//    init() {
-//        let context : NSManagedObjectContext
-//        (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-//        let myBundle = Bundle(identifier: "org.cocoapods.vlikhotk2019")
-//        guard let modelURL = myBundle?.url(forResource: "article", withExtension: "momd") else {
-//            fatalError("Error loading model from bundle")
-//        }
     func newNote() -> Notes {
 //        return Notes(entity: Notes.entity(), insertInto: managedObjectContext)
         return NSEntityDescription.insertNewObject(forEntityName: "Notes", into: self.managedObjectContext!) as! Notes
     }
     
    func getAllArticles() -> [Notes] {
-    print("hello getAllArticles")
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notes")
+        fetchRequest.fetchLimit = limit
+        fetchRequest.fetchOffset = index
         do {
-            print("hello fetchRequest")
             let result = try managedObjectContext?.fetch(fetchRequest) as! [Notes]
             return result
         }catch{
@@ -51,6 +46,12 @@ class NotesManager {
                 fatalError("Failure to save \(error)");
             }
         }
+    }
+    func countNotes() -> Int {
+//        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notes")
+        print("\nhello count\n")
+        return try! managedObjectContext?.count(for: fetchRequest) ?? 0
     }
     
 }

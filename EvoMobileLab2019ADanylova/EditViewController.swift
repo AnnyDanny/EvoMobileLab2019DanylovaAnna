@@ -41,18 +41,10 @@ class EditViewController: UIViewController {
     }
 
     @objc func save(){
-        if let edit = editTextView.text, !edit.isEmpty {
-//            let note = Notes(entity: Notes.entity(), insertInto: notesManager.managedObjectContext)
-            //            let note = notesManager?.newNote()
         editNote?.descriptionNote = editTextView.text
         editNote?.creationDate = Date()
             notesManager.save()
-            //try? notesManager.managedObjectContext?.save()
-        print("\nnote:\(editNote?.descriptionNote)\n")
-        }
-//        dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: false)
-        print("\n\nclicked save\n\n")
     }
     
     override func didReceiveMemoryWarning() {
