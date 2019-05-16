@@ -18,18 +18,10 @@ class EditViewController: UIViewController {
     
      var editNote: Notes?
     
-//    @IBAction func save(_ sender: UIBarButtonItem) {
-//        //        navigationController!.popViewController(animated: true)
-//        dismiss(animated: true, completion: nil)
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if editNote != nil {
-            print("\n\n\neditNote != nil\n")
-            print("editNote: \(editNote)")
-            print("\n\n\n")
             editTextView.text = editNote?.descriptionNote
         }
         else {
@@ -43,24 +35,8 @@ class EditViewController: UIViewController {
     @objc func save(){
         editNote?.descriptionNote = editTextView.text
         editNote?.creationDate = Date()
-            notesManager.save()
+            notesManager.saveNote()
         self.navigationController?.popViewController(animated: false)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

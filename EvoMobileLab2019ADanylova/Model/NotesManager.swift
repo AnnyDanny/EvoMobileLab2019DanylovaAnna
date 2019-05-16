@@ -13,14 +13,13 @@ class NotesManager {
     
     var index = 0
     var managedObjectContext: NSManagedObjectContext?
-    var limit = 10
+    var limit = 20
     
     func newNote() -> Notes {
-//        return Notes(entity: Notes.entity(), insertInto: managedObjectContext)
         return NSEntityDescription.insertNewObject(forEntityName: "Notes", into: self.managedObjectContext!) as! Notes
     }
     
-   func getAllArticles() -> [Notes] {
+   func getAllNotes() -> [Notes] {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notes")
         fetchRequest.fetchLimit = limit
         fetchRequest.fetchOffset = index
@@ -32,11 +31,11 @@ class NotesManager {
         }
     }
     
-    func removeArticle(article : Notes) {
-        managedObjectContext?.delete(article)
+    func removeNote(notes : Notes) {
+        managedObjectContext?.delete(notes)
     }
     
-    func save() {
+    func saveNote() {
         print("hello save")
         if (managedObjectContext?.hasChanges)! {
             do {
@@ -48,7 +47,6 @@ class NotesManager {
         }
     }
     func countNotes() -> Int {
-//        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Notes")
         print("\nhello count\n")
         return try! managedObjectContext?.count(for: fetchRequest) ?? 0
